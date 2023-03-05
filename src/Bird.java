@@ -3,10 +3,10 @@ public class Bird {
     String latName;
     int observations;
 
-    public Bird(String engName, String latName, int observations) {
+    public Bird(String engName, String latName) {
         this.engName = engName;
         this.latName = latName;
-        this.observations = observations;
+        this.observations = 0;
     }
 
     public String getEngName() {
@@ -23,10 +23,6 @@ public class Bird {
 
     @Override
     public String toString() {
-        return "Birds{" +
-                "engName='" + engName + '\'' +
-                ", latName='" + latName + '\'' +
-                ", observations=" + observations +
-                '}';
+        return this.engName + " (" + this.latName + "): " + this.observations + " observations.";
     }
 }
