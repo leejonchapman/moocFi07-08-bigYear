@@ -21,7 +21,7 @@ public class UserInterface {
             System.out.print("? ");
             String uI = userInput.nextLine();
 
-            if (userInput.equals("quit")) {
+            if (uI.equals("quit")) {
                 runMenu = false;
             }
             if (uI.equals("add")) {
@@ -38,14 +38,24 @@ public class UserInterface {
                     System.out.println(bird);
                 }
             }
-            if (uI.equals("one")){
+            if (uI.equals("one")) {
                 System.out.print("Bird? ");
                 String userBird = userInput.nextLine();
-                for (Bird bird:birdDatabsae
-                     ) {
-                   if (userBird.equals(bird.engName)){
-                       System.out.println(bird);
-                   }
+                for (Bird bird : birdDatabsae
+                ) {
+                    if (userBird.equals(bird.engName)) {
+                        System.out.println(bird);
+                    }
+                }
+            }
+            if (uI.equals("observation")) {
+                System.out.print("Bird? ");
+                String userBird = userInput.nextLine();
+                for (Bird bird : birdDatabsae
+                ) {
+                    if (userBird.equals(bird.engName)) {
+                        bird.observations++;
+                    }
                 }
             }
         }
