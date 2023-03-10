@@ -16,15 +16,15 @@ public class UserInterface {
                         "Observation - adds an observation \n" +
                         "All - prints all birds \n" +
                         "One - prints one bird \n" +
-                        "Quit - ends the program \n");
+                        "Quit - ends the programme \n");
         while (runMenu) {
             System.out.print("? ");
             String uI = userInput.nextLine();
 
-            if (uI.equals("quit")) {
+            if (uI.equals("Quit")) {
                 runMenu = false;
             }
-            if (uI.equals("add")) {
+            if (uI.equals("Add")) {
                 System.out.print("Name: ");
                 String engName = userInput.nextLine();
                 System.out.print("Name in latin: ");
@@ -32,13 +32,13 @@ public class UserInterface {
                 Bird bird = new Bird(engName, latName);
                 birdDatabsae.add(bird);
             }
-            if (uI.equals("print")) {
+            if (uI.equals("All")) {
                 for (Bird bird : birdDatabsae
                 ) {
                     System.out.println(bird);
                 }
             }
-            if (uI.equals("one")) {
+            if (uI.equals("One")) {
                 System.out.print("Bird? ");
                 String userBird = userInput.nextLine();
                 for (Bird bird : birdDatabsae
@@ -48,7 +48,7 @@ public class UserInterface {
                     }
                 }
             }
-            if (uI.equals("observation")) {
+            if (uI.equals("Observation")) {
                 System.out.print("Bird? ");
                 String userBird = userInput.nextLine();
                 for (Bird bird : birdDatabsae
